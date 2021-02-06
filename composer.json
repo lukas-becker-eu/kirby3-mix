@@ -14,7 +14,7 @@
   },
   "autoload": {
     "psr-4": {
-      "LukasBecker\\Mix\\": "classes/"
+      "LukasBecker\\": "classes/"
     }
   },
   "config": {

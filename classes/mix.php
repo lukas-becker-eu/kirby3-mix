@@ -1,6 +1,6 @@
 <?php
 
-namespace LukasBecker\Mix;
+namespace LukasBecker;
 
 class Helpers {
   function mix($url) {

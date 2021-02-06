@@ -15,11 +15,14 @@ Kirby::plugin('lukas-becker/kirby3-mix', [
       }
     },
     'js' => function($kirby, $url, $options) {
+      return (new \LukasBecker\Helpers())->mix($url);
+      /*
       if (function_exists('mix')) {
-        return mix($url);
+        return (new \LukasBecker\Helpers)->mix($url);
       } else {
         return $url;
       }
+      */
     }
   ],
 ]);
