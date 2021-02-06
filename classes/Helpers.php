@@ -1,9 +1,12 @@
 <?php
 
-namespace LukasBecker;
+namespace Mix;
 
-class Helpers {
-  function mix($url) {
+use Kirby\Toolkit\Str;
+use Kirby\Toolkit\F;
+
+final class Helpers {
+  static function mix($url) {
 
     if (! Str::startsWith($url, '/')) {
       $url = "/{$url}";

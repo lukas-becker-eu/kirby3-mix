@@ -1,5 +1,6 @@
 <?php
 
+use Mix\Helpers as H;
 @include_once __DIR__ . '/vendor/autoload.php';
 
 Kirby::plugin('lukas-becker/kirby3-mix', [
@@ -8,21 +9,10 @@ Kirby::plugin('lukas-becker/kirby3-mix', [
   ],
   'components' => [
     'css' => function($kirby, $url, $options) {
-      if (function_exists('mix')) {
-        return mix($url);
-      } else {
-        return $url;
-      }
+      return H::mix($url);
     },
     'js' => function($kirby, $url, $options) {
-      return (new \LukasBecker\Helpers())->mix($url);
-      /*
-      if (function_exists('mix')) {
-        return (new \LukasBecker\Helpers)->mix($url);
-      } else {
-        return $url;
-      }
-      */
+      return H::mix($url);
     }
   ],
 ]);
